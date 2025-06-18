@@ -2,12 +2,12 @@
 echo "###########################################"
 echo "Creating S3 bucket"
 echo "###########################################"
-aws s3api create-bucket --bucket my-terraform-state-bucket --region us-east-1
+aws s3api create-bucket --bucket my-terraform-state-bucket-965482 --region us-east-1
 
 echo "###########################################"
 echo "Enabling versioning on S3 bucket"
 echo "###########################################"
-aws s3api put-bucket-versioning --bucket my-terraform-state-bucket --versioning-configuration Status=Enabled
+aws s3api put-bucket-versioning --bucket my-terraform-state-bucket-965482 --versioning-configuration Status=Enabled
 
 echo "###########################################"
 echo "Creating DynamoDB table for Terraform state locking"
